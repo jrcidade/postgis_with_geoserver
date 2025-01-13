@@ -1,14 +1,10 @@
 # postgis_with_geoserver
 Docker projetct with postgis and geoserver
 
-Repositório para usar em um Servidor Local para usar os arquivos em produção.
-[Dúvidas](https://wa.me/message/H73OMWQ3X346E1)
-
 >`Baixar o repositório do github:`
 ```
 git clone git@github.com:jrcidade/postigis_with_geoserver.git
 ```
->`Acessar a pasta: postgis_with_geoserver e mover o arquivo env.example para .env:`
 ```
 sudo cp env.example .env
 ```
