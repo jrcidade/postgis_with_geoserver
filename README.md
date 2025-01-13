@@ -23,7 +23,13 @@ POSTGRES_DB=db_name
 DB_PORT=port_ext:5432
 <br />
 <br />
-
+ENV_GEOSERVER=geoserver
+<br />
+GEOSERVER_VERSAO=2.26.X
+<br />
+GEOSERVER_PORT=port_ext:8080
+<br />
+<br />
 
 >`Construir o projeto`
 ```
