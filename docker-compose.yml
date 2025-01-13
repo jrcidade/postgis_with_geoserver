@@ -1,0 +1,34 @@
+version: '3.3'
+
+services:
+  database:
+   container_name: ${DB_NAME}
+   restart: always
+   image: pgrouting/pgrouting
+   ports:
+     - ${DB_PORT}
+   environment:
+     LC_ALL: ${LC_ALL}
+     POSTGRES_USER: ${POSTGRES_USER}
+     POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+     POSTGRES_DB: ${POSTGRES_DB}
+   volumes:
+     - ./pg-data:/var/lib/postgresql/
+     - type: tmpfs
+       target: /dev/shm
+   networks:
+     - web_network
+  geoserver:
+    container_name: ${ENV_GEOSERVER}
+    image: docker.osgeo.org/geoserver:${GEOSERVER_VERSAO}
+    restart: always
+    volumes:
+      - ./geoserver-data:/opt/geoserver_data/
+    ports:
+      - ${GEOSERVER_PORT}
+    networks:
+     - web_network
+
+networks:
+ web_network:
+   driver: bridge
