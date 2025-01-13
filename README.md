@@ -1,8 +1,6 @@
 # postgis_with_geoserver
 Docker projetct with postgis and geoserver
 
-
-# Project Postgis
 Repositório para usar em um Servidor Local para usar os arquivos em produção.
 [Dúvidas](https://wa.me/message/H73OMWQ3X346E1)
 
